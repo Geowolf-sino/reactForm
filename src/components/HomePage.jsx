@@ -27,6 +27,14 @@ const HomePage = () => {
         bio: 'Congratulations! You have successfully created a new React project using Create React App. You can now explore and modify the proje',
         age: 22,
         isHappy: false
+      },
+      {
+        id: 3,
+        firstName: 'John',
+        lastName: 'Doe',
+        bio: 'Congratulations! You have successfully created a new React project using Create React App. You can now explore and modify the proje',
+        age: 52,
+        isHappy: false
       }
     ];
     setUsers([...userList]);
