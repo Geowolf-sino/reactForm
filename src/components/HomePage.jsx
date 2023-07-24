@@ -8,7 +8,7 @@ const HomePage = () => {
 
   const [users, setUsers] = useState([]);
   const [deleteUserId, setDeleteUserId] = useState([]);
-  // const [editUserForm, setEditUserForm] = useState([]);
+  //const [editUserForm, setEditUserForm] = useState([]);
 
   useEffect(() => {
     const userList = [
@@ -39,9 +39,8 @@ const HomePage = () => {
     ];
     setUsers([...userList]);
 
-    return () => {
 
-    };
+
   }, []);
 
   const addNewUser = (newUser) => {
@@ -63,7 +62,7 @@ setDeleteUserId(id)
 } 
 
 const editUser = (user) => {
-console.log(user);
+setUsers([...users.map(item => item.id === user.edittingUserId ? {...user, id: user.edittingUserId} : item)]);
 }
 
 

@@ -6,7 +6,7 @@ import AddUser from './AddUser';
 const User = (props) => {
 const [editForm, setEditForm] = useState(false);
 
-  const { user: { firstName, lastName, bio, isHappy }, onDelete, user } = props;
+  const { user: {id, firstName, lastName, bio, isHappy }, onDelete, user } = props;
 
 
   return (
@@ -19,7 +19,7 @@ const [editForm, setEditForm] = useState(false);
       <p>{bio}</p>
       <b>{isHappy ? 'Happy' : 'Not happy'}</b>
 
-      {editForm &&  <AddUser addNewUser={props.onEdit}/>}
+      {editForm &&  <AddUser addNewUser={props.onEdit} edittingUserId={id}/>}
     </div>
   )
 

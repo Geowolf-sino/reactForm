@@ -2,7 +2,7 @@ import { useState } from "react"
 
 
 const AddUser = (props ) => {
-  const {addNewUser} = props;
+  const {addNewUser, edittingUserId} = props;
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -20,6 +20,7 @@ const AddUser = (props ) => {
       bio,
       age,
       isHappy,
+      edittingUserId
     };
     addNewUser(newAddUsers);
 
